@@ -1,0 +1,13 @@
+name: ${project.name}
+description: ${project.description}
+
+main: tsp.forge.Forge
+version: ${project.version}
+api-version: 1.18
+author: Silent
+
+commands:
+  forge:
+    usage: /forge <args>
+    description: Forge Commands
+    aliases: [f]

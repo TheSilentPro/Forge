@@ -1,0 +1,60 @@
+noPermission: "&cNo permission!"
+invalidArguments: "&cInvalid sub-command!"
+onlyPlayers: "&cOnly for in-game players!"
+invalidItem: "&cThe item in your hand can not be edited!"
+invalidNumber: "&cInvalid number: &e$index"
+
+help: |
+  &7<=============== [ &6Forge &7| &5Commands &7] ===============>
+  &6/f name &c<name> &7- Set the item name.
+  &6/f type &c<type> &7- Set the item type (Material).
+  &6/f lore &c<ADD|REMOVE <index>> &7- Modify the item lore.
+  &6/f enchant &c<ADD|REMOVE> <enchantment> &7- Modify the item enchantments.
+  &6/f flag &c<ADD|REMOVE> <FLAG> &7- Modify the item flags.
+  &6/f book &c<TITLE|AUTHOR|GENERATION> <TEXT> &7- Modify the book.
+  &6/f attr &c<ATTRIBUTE> <NAME> <AMOUNT> <OPERATION> <EQUIPMENT_SLOT> &7- Modify the item attributes.
+  &6/f potion &c<COLOR|ADD|REMOVE> <EFFECT> [DURATION] [AMPLIFIER] &7- Modify the item potion effects.
+  &6/f head &c<NAME> &7- Modify the item head owner.
+  &6/f clear &7- Clear all item meta.
+  &7<============================================================>
+# Item Messages Configuration
+metaClear: "&7Cleared the meta from your current item: &6$name"
+
+name: "&7Changed the name of your current item to: &6$name"
+type: "&7Changed the type of your current item to &6$type"
+typeInvalid: "&cInvalid material: &e$type"
+
+loreAdd: "&7Added lore to your current item: &6$lore"
+loreRemove: "&7Removed lore from your current item: &6$lore &7(&6$index&7)"
+loreSubInvalid: "&cInvalid lore arguments! Usage: /f lore <ADD|REMOVE> <MESSAGE>"
+
+enchantAdd: "&7Added enchantment to your current item: &6$name"
+enchantRemove: "&7Removed enchantment from your current item: &6$name"
+enchantInvalid: "&cInvalid enchantment: &e$name"
+enchantSubInvalid: "&cInvalid enchant arguments! Usage: /f enchant <ADD|REMOVE> <ENCHANTMENT> [LEVEL]"
+
+flagAdd: "&7Added flags to your current item: &6$name"
+flagRemove: "&7Removed flags to your current item: &6$name"
+flagInvalid: "&cInvalid flags!"
+flagSubInvalid: "&cInvalid flag sub-command! Usage: /f flag <ADD|REMOVE> <FLAG>"
+
+bookTitle: "&7Changed the title of your book to: &6$name"
+bookAuthor: "&7Changed the author of your book to: &6$name"
+bookGeneration: "&7Changed the generation of your book to: &6$name"
+bookInvalid: "&cThe item in your hand is not a book!"
+bookSubInvalid: "&cInvalid book sub-command! Usage: /f book <TITLE|AUTHOR|GENERATION> <TEXT>"
+bookGenerationInvalid: "&cInvalid generation type! Types: &eORIGINAL &c| &eCOPY_OF_ORIGINAL &c| &eCOPY_OF_COPY &c| &eTATTERED"
+
+attributeAdd: "&7Added attribute to your item: &6$name"
+attributeRemove: "&7Removed attribute from your item: &6$name"
+attributeInvalid: "&cInvalid attribute!"
+attributeSubInvalid: "&cInvalid attribute sub-command! Usage: /f attr <ATTRIBUTE> <NAME> <AMOUNT> <OPERATION> <EQUIPMENT_SLOT>"
+
+potionColorAdd: "&7Changed the color of your potion to: &6$name"
+potionAdd: "&7Added effect to your potion: &6$name"
+potionRemove: "&7Removed effect from your potion: &6$name"
+potionInvalid: "&cThe item in your hand is not a potion!"
+potionSubInvalid: "&cInvalid potion sub-command! Usage: /f potion <COLOR|ADD|REMOVE> <EFFECT> [DURATION] [AMPLIFIER]"
+
+headInvalid: "&cThe item in your hand is not a head!"
+headSet: "&7Changed the owner of your item to: &6$name"
