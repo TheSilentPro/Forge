@@ -15,4 +15,9 @@ public class HelpCommand extends ForgeSubCommand {
         return 0;
     }
 
+    @Override
+    public boolean isRequireItem() {
+        return false;
+    }
+
 }

@@ -10,11 +10,13 @@ public class ForgeSubCommand {
     private final String name;
     private final String permission;
     private final CommandHandler handler;
+    private final boolean requireItem;
 
     public ForgeSubCommand(String name, String permission, CommandHandler handler) {
         this.name = name;
         this.permission = permission;
         this.handler = handler;
+        this.requireItem = true;
     }
 
     public ForgeSubCommand(String name, CommandHandler handler) {
@@ -31,6 +33,10 @@ public class ForgeSubCommand {
 
     public CommandHandler getHandler() {
         return handler;
+    }
+
+    public boolean isRequireItem() {
+        return requireItem;
     }
 
     private final List<String> finalCompletions = new ArrayList<>();

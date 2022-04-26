@@ -53,7 +53,7 @@ public class ForgeCommand implements CommandExecutor, TabCompleter {
             return true;
         }
 
-        if (player.getInventory().getItemInMainHand().getType().isAir() && !cmd.getName().equalsIgnoreCase("help")) { // Ignore help command
+        if (player.getInventory().getItemInMainHand().getType().isAir() && cmd.isRequireItem()) { // Ignore commands that don't require an item
             localization.sendMessage(player, "invalidItem");
             return true;
         }

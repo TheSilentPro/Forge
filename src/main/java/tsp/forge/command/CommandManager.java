@@ -54,6 +54,9 @@ public class CommandManager {
         register(new PotionCommand());
         register(new HeadCommand());
         register(new ClearCommand());
+        register(new SignCommand());
+        register(new WaterloggedCommand());
+        register(new LevelCommand());
     }
 
 }

@@ -27,7 +27,7 @@ public class BookCommand extends ForgeSubCommand {
                 return;
             }
 
-            String text = StringUtils.colorize(StringUtils.joinArgs(2, args));
+            String text = Utils.translate(StringUtils.joinArgs(2, args));
             if (sub.equalsIgnoreCase("title") || sub.equalsIgnoreCase("t")) {
                 ((BookMeta) meta).setTitle(text);
                 Forge.getInstance().getLocalization().sendMessage(player, "bookTitle", msg -> msg.replace("$name", text));

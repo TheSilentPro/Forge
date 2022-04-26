@@ -16,6 +16,9 @@ help: |
   &6/f potion &c<COLOR|ADD|REMOVE> <EFFECT> [DURATION] [AMPLIFIER] &7- Modify the item potion effects.
   &6/f head &c<NAME> &7- Modify the item head owner.
   &6/f clear &7- Clear all item meta.
+  &6/f sign &c<GLOW|SET <LINE> <TEXT>> &7- Modify data of the target sign.
+  &6/f waterlog &7- Toggle the waterlogged state of the target block.
+  &6/f level <level> &7- Modify the level state of the target block.
   &7<============================================================>
 # Item Messages Configuration
 metaClear: "&7Cleared the meta from your current item: &6$name"
@@ -54,7 +57,25 @@ potionColorAdd: "&7Changed the color of your potion to: &6$name"
 potionAdd: "&7Added effect to your potion: &6$name"
 potionRemove: "&7Removed effect from your potion: &6$name"
 potionInvalid: "&cThe item in your hand is not a potion!"
-potionSubInvalid: "&cInvalid potion sub-command! Usage: /f potion <COLOR|ADD|REMOVE> <EFFECT> [DURATION] [AMPLIFIER]"
+potionSubInvalid: "&cInvalid potion sub-command! Usage: /f potion <COLOR <COLOR_NAME>|ADD|REMOVE> <EFFECT> [DURATION] [AMPLIFIER]"
 
 headInvalid: "&cThe item in your hand is not a head!"
 headSet: "&7Changed the owner of your item to: &6$name"
+
+signGlow: "&7Changed sign glow status to: &6$name"
+signSet: "&7Changed sign line &6$index &7to: &6$name"
+signInvalid: "&cYou need to look at a sign!"
+signSubInvalid: "&cInvalid sign sub-command! Usage: /f sign <GLOW|SET <LINE> <TEXT>>"
+
+waterSet: "&7Changed waterlogged state to: &6$name"
+waterInvalid: "&cYou need to look at a block that can be waterlogged!"
+
+# 'level' represents the amount of fluid contained within this block, either by itself or inside a cauldron.
+# In the case of water and lava blocks the levels have special meanings:
+# A level of 0 corresponds to a source block, 1-7 regular fluid heights, and 8-15 to "falling" fluids.
+# All falling fluids have the same behaviour, but the level corresponds to that of the block above them, equal to this.level - 8
+# Note that counterintuitively, an adjusted level of 1 is the highest level, whilst 7 is the lowest.
+levelSet: "&7Changed the level state to: &6$name"
+levelMax: "&cThe level for the target block can not be higher than: &e$name"
+levelInvalid: "&cYou need to look at a block that can be levelled!"
+levelSubInvalid: "&cInvalid level sub-command! Usage: /f level <level>"

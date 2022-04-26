@@ -6,7 +6,7 @@
 
     <groupId>tsp.forge</groupId>
     <artifactId>Forge</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>Forge</name>
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>com.github.TheSilentPro</groupId>
             <artifactId>SmartPlugin</artifactId>
-            <version>ac0c1d29a6</version>
+            <version>8fa78e9a79</version>
         </dependency>
     </dependencies>
 

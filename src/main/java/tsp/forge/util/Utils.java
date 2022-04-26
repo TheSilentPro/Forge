@@ -2,6 +2,7 @@ package tsp.forge.util;
 
 import org.bukkit.Color;
 import tsp.forge.Forge;
+import tsp.smartplugin.utils.StringUtils;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -10,6 +11,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Utils {
+
+    public static String translate(String s) {
+        return StringUtils.colorize(StringUtils.hex(s));
+    }
 
     /**
      * Match a {@link Color} from a string using reflection.

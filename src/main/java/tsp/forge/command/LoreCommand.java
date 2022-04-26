@@ -7,7 +7,6 @@ import tsp.forge.util.Utils;
 import tsp.smartplugin.utils.StringUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class LoreCommand extends ForgeSubCommand {
@@ -23,7 +22,7 @@ public class LoreCommand extends ForgeSubCommand {
 
             String loreArgs = StringUtils.joinArgs(2, args);
             if (sub.equalsIgnoreCase("add") || sub.equalsIgnoreCase("a")) {
-                String line = StringUtils.colorize(loreArgs);
+                String line = Utils.translate(loreArgs);
                 lore.add(line);
                 item.getItemMeta().setLore(lore);
                 Forge.getInstance().getLocalization().sendMessage(player, "loreAdd", msg -> msg
